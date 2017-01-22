@@ -1,9 +1,23 @@
 extends ../layouts/default.pug
 
 block page-header
-  h2 RESTful api study
+	h1= title
 
 block content
-  h1 H1 text in content block
-  ol
-    li Functionality will be added in future commits.
+	if (posts.length)
+		each post in posts
+			include post
+	else
+		h4 No posts.&nbsp
+			a(href="") add one
+block addPost
+	form(method="post", action="/", role="form")
+		label(for='body') Post text input
+			input.text(type='text', name="body", placeholder='Enter text of your profile')
+			label(for='gender') male
+				input(type="radio" name="gender" value="male")
+			label(for='gender') female
+				input(type="radio" name="gender" value="female")
+			label(for='gender') other
+				input(type="radio" name="gender" value="other" checked)
+			input(type="submit" value="SUBMIT")
