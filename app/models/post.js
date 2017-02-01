@@ -3,7 +3,7 @@ mongoose.Promise = require('bluebird')
 
 var postSchema = new mongoose.Schema({
 	body: { type : String, default : '', trim : true },
-	gender: { type : String, default : ''},
+	//gender: { type : String, default : ''},
 	// image: {
 	// 	cdnUri: String,
 	// 	files: []

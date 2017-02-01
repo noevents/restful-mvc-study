@@ -16,23 +16,19 @@ exports.index = function (req, res) {
 		.catch(function(err){
 			console.log(err)
 		})
-
 };
 exports.create = function (req, res) {
-	const post = new Post(pick(req.body, ['body', 'gender']))
+	const post = new Post(pick(req.body, ['body']))
+	console.log(req.body)
 	post.uploadAndSave()
 		.then(function(post){
 			Post.list()
 				.then(function(posts){
-					respond(res, 'home/index', {
-						posts,
-						title: 'Home Page',
-				})
+					res.json(posts.slice(req.body.postsCount))
 			})
 		})
 		.catch(function(err){
 			console.log(err)
 		})
 	
-
 };

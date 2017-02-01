@@ -8,54 +8,75 @@ body {
   /* The html and body elements cannot have any padding or margin. */
 }
 
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
-
 /* Set the fixed height of the footer here */
 #footer {
   height: 60px;
   background-color: #f5f5f5;
 }
 
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-
-.container .text-muted {
-  margin: 20px 0;
-}
-
-#footer > .container {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 /* -----------------------------------------------
   App styles
   ------------------------------------------------ */
 
-body {
-  padding-top: 60px;
+form {
+  padding: 10px;
 }
 
-.article, .comment {
-  padding: 15px 0;
-  border-bottom: 1px solid #e8e8e8;
+.content {
+  padding: 20px 48px 50px;
 }
 
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+.post-wrapper {
+  margin: 4px 0 4px 0px;
+  overflow: visible;
+  word-wrap: break-word;
+}
+
+.post {
+  display: inline-block;
+  min-width: 26.4em;
+  max-width: 100%;
+  background: #DDDDDD;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  padding: 1px 3px 3px;
+  margin: 0;
+  overflow: hidden;
+}
+
+p {
+  padding: 0 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 50px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.reply-label {
+  color: #122333;
+  cursor: pointer;
+}
+.reply-label:hover {
+  color: #D9534F;
+  cursor: pointer;
+}
+
+.reply-label-wrapper {
+  padding: 0 50px;
+  font-size: 1.1em;
+  text-align: -webkit-center
+}
+
+.addPost-wrapper {
+  padding: 32px 48px 0;
 }
 
 .error,
@@ -68,50 +89,6 @@ button.error:focus {
   color: #D9534F;
 }
 
-.form-actions {
-  background: #fff;
-  border: 0;
-}
-
-#spacer {
-  display: inline-block;
-}
-
-.muted {
-  color: #aaa;
-  font-size: 12px;
-}
-
 .alert {
   margin-top: 10px;
-}
-
-.navbar-brand {
-  font-size: 14px;
-  color: #000 !important;
-}
-
-.navbar-right > li > a {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-/**
- * Signup / login
- */
-
-.form-signin input#email {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input#password {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.form-signin input[type="text"] {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
